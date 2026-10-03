@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  height: 72px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 600;
+}
+
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 30px;
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 70px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero-content p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: #667085;
+  max-width: 550px;
+}
+
+.form-card {
+  background: white;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2 {
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  background: white;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+button {
+  margin-top: 18px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.scheme-info {
+  margin-top: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+}
+
+.scheme-info p {
+  margin: 7px 0;
+  color: #374151;
+}
+
+.apply-button {
+  margin-top: 15px;
+  padding: 11px 20px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.apply-button:hover {
+  background: #1d4ed8;
+}
+
+.scheme-details {
+  grid-column: 1 / -1;
+  margin-top: 20px;
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.scheme-details h2 {
+  color: #2563eb;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.scheme-details > p {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.scheme-details .scheme-info {
+  margin-bottom: 20px;
+}
+
+.details-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.details-buttons .apply-button {
+  margin-top: 0;
+}
+
+.close-button {
+  margin-top: 0;
+  padding: 11px 20px;
+  background: #6b7280;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: #4b5563;
+}
+
+.eligibility-summary {
+  margin-top: 15px;
+  padding: 15px;
+  background: #eef6ff;
+  border-radius: 10px;
+  border-left: 4px solid #2563eb;
+}
+
+.eligibility-summary h4 {
+  color: #172033;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.eligibility-summary p {
+  margin: 6px 0;
+  color: #374151;
+  font-size: 14px;
+}
+
+form button:disabled {
+  background: #93b4f5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}

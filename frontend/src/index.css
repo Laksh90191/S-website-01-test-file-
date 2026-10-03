@@ -1,0 +1,463 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #f6f8fc;
+  color: #172033;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  height: 72px;
+  background: rgba(255, 255, 255, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  border-bottom: 1px solid #e6eaf0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  color: #2563eb;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #475467;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 75px 30px;
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 70px;
+  align-items: start;
+}
+
+.hero-content {
+  padding-top: 55px;
+}
+
+.hero-content h1 {
+  font-size: 54px;
+  line-height: 1.08;
+  letter-spacing: -1.8px;
+  margin-bottom: 25px;
+  color: #111827;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #667085;
+  max-width: 570px;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.form-card {
+  background: white;
+  padding: 34px;
+  border-radius: 20px;
+  border: 1px solid #e8ecf2;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.form-card h2 {
+  margin-bottom: 25px;
+  font-size: 25px;
+  color: #111827;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #344054;
+  margin-top: 8px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 9px;
+  font-size: 15px;
+  background: white;
+  color: #172033;
+  transition: 0.2s;
+}
+
+input::placeholder {
+  color: #98a2b3;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+select option {
+  color: #172033;
+  background: white;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 14px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+form button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   RESULTS
+========================= */
+
+.results {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid #e8ecf2;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
+}
+
+.results h2 {
+  color: #111827;
+  margin-bottom: 22px;
+  font-size: 27px;
+}
+
+/* =========================
+   SCHEME CARD
+========================= */
+
+.scheme-card {
+  background: #fafbfc;
+  padding: 24px;
+  margin-bottom: 18px;
+  border-radius: 15px;
+  border: 1px solid #e8ecf2;
+  transition: 0.2s;
+}
+
+.scheme-card:hover {
+  border-color: #c7d7fe;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  transform: translateY(-2px);
+}
+
+.scheme-card h3 {
+  color: #2563eb;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.scheme-card > p {
+  color: #667085;
+  line-height: 1.6;
+}
+
+.scheme-info {
+  margin-top: 16px;
+  padding: 16px;
+  background: white;
+  border-radius: 11px;
+  border: 1px solid #edf0f4;
+}
+
+.scheme-info p {
+  margin: 7px 0;
+  color: #475467;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* =========================
+   WHY YOU MATCHED
+========================= */
+
+.eligibility-summary {
+  margin-top: 15px;
+  padding: 17px;
+  background: #f0f7ff;
+  border-radius: 11px;
+  border-left: 4px solid #2563eb;
+}
+
+.eligibility-summary h4 {
+  color: #172033;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.eligibility-summary p {
+  margin: 6px 0;
+  color: #344054;
+  font-size: 14px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.apply-button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 11px 20px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.apply-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.close-button {
+  margin-top: 0;
+  padding: 11px 20px;
+  background: #667085;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.close-button:hover {
+  background: #475467;
+}
+
+/* =========================
+   DETAILS
+========================= */
+
+.scheme-details {
+  grid-column: 1 / -1;
+  margin-top: 20px;
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid #e8ecf2;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.07);
+}
+
+.scheme-details h2 {
+  color: #2563eb;
+  margin-bottom: 14px;
+  font-size: 28px;
+}
+
+.scheme-details > p {
+  color: #667085;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.details-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* =========================
+   NO RESULTS
+========================= */
+
+.no-results {
+  background: #f8fafc;
+  padding: 35px 25px;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px dashed #d0d5dd;
+}
+
+.no-results h3 {
+  color: #172033;
+  margin-bottom: 10px;
+}
+
+.no-results p {
+  color: #667085;
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-content {
+    padding-top: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 44px;
+  }
+
+  .form-card {
+    width: 100%;
+  }
+
+  .results,
+  .scheme-details {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 45px 18px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .form-card,
+  .results,
+  .scheme-details {
+    padding: 22px;
+    border-radius: 15px;
+  }
+
+  .details-buttons {
+    flex-direction: column;
+  }
+}
+/* =========================
+   SCHEME BADGES
+========================= */
+
+.scheme-badges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.scheme-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px;
+  background: white;
+  border: 1px solid #e8ecf2;
+  border-radius: 10px;
+}
+
+.scheme-badge > span {
+  font-size: 20px;
+}
+
+.scheme-badge div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.scheme-badge small {
+  color: #98a2b3;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.scheme-badge strong {
+  color: #344054;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .scheme-badges {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .scheme-badges {
+    grid-template-columns: 1fr;
+  }
+}
